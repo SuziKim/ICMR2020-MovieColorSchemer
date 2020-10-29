@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<title>Movie Color Schemer - {{ movie.title }}</title>
+</head>
+
+<body>
+	<header>
+		{{ movie.title }}
+	</header>
+	<div class="shotIDs">
+		<table class="color-schemes">
+			<tr>
+				{% for c in colors %}
+					<td style="background-color:{{ c }}"></td>
+				{% endfor %}				
+			</tr>
+		</table>
+		<table class="type08">
+			<thead>
+				<tr>
+					<th scope="cols">Shots</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for shotID in shotIDs %}
+					<tr>
+					<td><a href="/movie/{{ movie.dirName }}/{{ shotID }} ">Shot #{{ shotID }}</a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</body>

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	
+	<title>Movie Color Schemer - {{ movie.title }} - Shot #{{ shotID }}</title>
+</head>
+
+<body>
+	<header>
+		{{ movie.title }}
+	</header>
+	<div class="frames">
+		<table class="type08">
+	    <thead>
+			<tr>
+				<th scope="cols">Frame No.</th>
+				<th scope="cols">Image</th>
+				<th scope="cols">KeyFrame</th>
+				<th scope="cols">Clearness</th>
+				<th scope="cols">Representativeness</th>
+				<th scope="cols">Saliency</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for cost_dict in frame_data %}
+			<tr>
+				<th scope="rows">{{ cost_dict.frameNo }}</th>
+				<td><img src="{{ cost_dict.img }}" /></td>
+				<td>{% if cost_dict.keyframe == 1 %} {{ "Y" }} {% endif %}</td>
+				<td>{{ cost_dict.clearness }}</td>
+				<td>{{ cost_dict.representativeness }}</td>
+				<td>{{ cost_dict.saliency }}</td>
+			</tr>
+		</tbody>
+		{% endfor %}
+		</table>
+	</div>
+</body>

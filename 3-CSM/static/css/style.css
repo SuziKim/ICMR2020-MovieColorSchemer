@@ -1,0 +1,73 @@
+ul.movie_list {
+	list-style-type: square;
+	font-size: 20px;
+}
+
+header {
+	font-size: 30px;
+	font-weight: bold;
+	width: 100%;
+	top: 0px;
+}
+
+.frames {
+	width: 65%;
+}
+
+.shotIDs {
+    left: 0px;
+    width: 100%;
+    top: 50px;
+}
+
+.chart {
+	left: 0px;
+	width: 35%;
+	top: 50px;
+}
+
+table.type08 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border-left: 1px solid #ccc;
+    margin: 20px 10px;
+}
+
+table.type08 thead th {
+    padding: 10px;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 2px solid #c00;
+    background: #dcdcd1;
+    text-align: center;
+}
+
+table.type08 tbody th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #ececec;
+}
+
+table.type08 td {
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+table.color-schemes td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+}
+
+body {
+	/*overflow-y: scroll;*/
+}
