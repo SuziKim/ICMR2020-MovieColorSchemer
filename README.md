@@ -107,7 +107,7 @@ $ sudo matlab -nojvm -nodesktop -nosplash
 To visualize the results, CSM is implemented on by using [Django](https://www.djangoproject.com/). Before you run the CSM, you should import the cost csv files, which generated from the BPE.
 ```bash
 $ cd 3-CSM
-$ bash presetting.sh
+$ bash data_configuration.sh
 ```
 
 After importing costs, you can run the server(https://127.0.0.1) as follow:
