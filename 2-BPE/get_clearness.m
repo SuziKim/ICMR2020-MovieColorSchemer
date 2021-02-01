@@ -24,11 +24,8 @@ for i = 1:frame_count
     switch clearness_cost_mode
         case 'brisque'
             % normalize brisque which is usually in the range [0, 100]
-            if isnan(brisque(frame))
-                clearness_costs(i) = 0;
-            else
-                clearness_costs(i) = 0.01 * (100 - brisque(frame));
-            end
+            lambda_eq = @(x) [brisque(x.f) 1]*sparse(1+isnan(brisque(x.f)),1,1,2,1);
+            clearness_costs(:) = arrayfun(lambda_eq, frame_structure);
 
         case 'piqe'
             clearness_costs(i) = piqe(frame);
