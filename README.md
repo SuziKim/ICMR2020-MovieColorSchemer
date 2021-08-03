@@ -104,7 +104,7 @@ $ sudo matlab -nojvm -nodesktop -nosplash
 
 ### (3) Color Scheme Merge (CSM)
 
-To visualize the results, CSM is implemented on by using [Django](https://www.djangoproject.com/). Before you run the CSM, you should import the cost csv files, which generated from the BPE.
+CSM is based on ["Decomposing Images into Layers via RGB-space Geometry"](https://github.com/CraGL/Decompose-Single-Image-Into-Layers) by Jianchao Tan, Jyh-Ming Lien, and Yotam Gingold in ACM Transactions on Graphics (TOG). To visualize the results, CSM is implemented on by using [Django](https://www.djangoproject.com/). Before you run the CSM, you should import the cost csv files, which generated from the BPE.
 ```bash
 $ cd 3-CSM
 $ bash data_configuration.sh
